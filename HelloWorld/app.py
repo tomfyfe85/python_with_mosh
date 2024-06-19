@@ -1,18 +1,19 @@
 "Scratch module for working through lessons"
 
 
-# def multiply(*list):
-#     total = 1
-#     for number in list:
-#         total *= number
-#     return total
+def fizz_buzz(number):
+    if (number % 3 == 0) and (number % 5 == 0):
+        print("fizzbuzz")
+    if number % 5 == 0:
+        print("buzz")
+    if number % 3 == 0:
+        print("fizz")
+
+    print("not divisible by 3, 5 or both")
 
 
-# print(multiply(2, 3, 4, 5))
+# if inout is divisble by 3 return fizz
+# if it is divisible by 5 return buzz
+# if it is divisble by 3 and 5 return fizzbuzz
 
-
-def save_user(**user):
-    print(user['id'])
-
-
-save_user(id=1, name="admin")
+fizz_buzz(31)
