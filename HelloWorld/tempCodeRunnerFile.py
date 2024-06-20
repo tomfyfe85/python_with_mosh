@@ -1,4 +1,1 @@
---> [1, 2, 3, 4]
-
-# # unpacking dictionaries
-# **
+t[1], t[0]

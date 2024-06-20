@@ -116,7 +116,7 @@
 
 # for key, value in point.items():
 #     print(key, value)
-    
+
 # # -->
 # # y 2
 # # z 20
@@ -129,32 +129,55 @@
 # generator expressions
 # these generate a new value per iteration, rather than store all the values like a list
 # looks like a list comp but with () instead of []
-# use this this save memory/increase efficiency 
+# use this this save memory/increase efficiency
 
 
 # unpacking operator
-nums = [1,2,3]
-print(*nums)
-# same as ... in JS
+# nums = [1,2,3]
+# print(*nums)
+# # same as ... in JS
 
-vals = [*range(5), *"hi marge"]
-#  can unpack any iterables
-print(vals)
-# [0, 1, 2, 3, 4, 'h', 'i', ' ', 'm', 'a', 'r', 'g', 'e']
+# vals = [*range(5), *"hi marge"]
+# #  can unpack any iterables
+# print(vals)
+# # [0, 1, 2, 3, 4, 'h', 'i', ' ', 'm', 'a', 'r', 'g', 'e']
 
-# combine lists
-first = [1,2]
-second = [3,4]
+# # combine lis ts
+# first = [1,2]
+# second = [3,4]
 
-values = [*first, *second]
-print(values)
-# --> [1, 2, 3, 4]
+# values = [*first, *second]
+# print(values)
+# # --> [1, 2, 3, 4]
 
-# # unpacking dictionaries
-# **
+# # # unpacking dictionaries
+# # **
 
-one = dict(x=1)
-two = dict(x=10, y=2)
-combined = {**one, **two, "z":4}
-print(combined)
-# if two keys are the same it takes the last key
+# one = dict(x=1)
+# two = dict(x=10, y=2)
+# combined = {**one, **two, "z":4}
+# print(combined)
+# # if two keys are the same it takes the last key
+
+# EXERCISE
+
+# get the most repeated char in this text
+sentence = "This is a common interview question"
+striped = "".join(sentence.split())
+
+# print(striped)
+
+unpack = [char for char in "".join(sentence.split())]
+newDic = {char: 0 for char in unpack}
+for char in unpack:
+    if char in newDic:
+        newDic[char] += 1
+newSort = newDic.items()
+
+# print(sorted(newSort))
+
+newTups = sorted([(t[1], t[0]) for t in newSort])
+
+print('Most repeated character:',newTups[-1][1], f'\nRepeated {newTups[-1][0]} times')
+
+
