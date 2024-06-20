@@ -1,1 +1,1 @@
-t[1], t[0]
+pprint(char_frequency, width=1)

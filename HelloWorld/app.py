@@ -162,22 +162,29 @@
 # EXERCISE
 
 # get the most repeated char in this text
+
+
+from pprint import pprint
+
 sentence = "This is a common interview question"
-striped = "".join(sentence.split())
 
 # print(striped)
+char_frequency: dict = {}
 
-unpack = [char for char in "".join(sentence.split())]
-newDic = {char: 0 for char in unpack}
-for char in unpack:
-    if char in newDic:
-        newDic[char] += 1
-newSort = newDic.items()
+for char in sentence:
+    if char in char_frequency:
+        char_frequency[char] += 1
+    else:
+        char_frequency[char] = 1
 
-# print(sorted(newSort))
+# print(char_frequency)
 
-newTups = sorted([(t[1], t[0]) for t in newSort])
+newSort = char_frequency.items()
 
-print('Most repeated character:',newTups[-1][1], f'\nRepeated {newTups[-1][0]} times')
+char_freq = sorted(char_frequency.items(), 
+                    key=lambda kv: kv[1],
+                    reverse=True)
+print(char_freq[0])
+# print('Most repeated character:',newTups[-1][1], f'\nRepeated {newTups[-1][0]} times')
 
-
+# pprint(char_frequency, width=1)
