@@ -1,1 +1,1 @@
-pprint(char_frequency, width=1)
+print("second code:", timeit(code2, number=10000))

@@ -164,27 +164,119 @@
 # get the most repeated char in this text
 
 
-from pprint import pprint
+# from pprint import pprint
 
-sentence = "This is a common interview question"
+# sentence = "This is a common interview question"
 
-# print(striped)
-char_frequency: dict = {}
+# # print(striped)
+# char_frequency: dict = {}
 
-for char in sentence:
-    if char in char_frequency:
-        char_frequency[char] += 1
-    else:
-        char_frequency[char] = 1
+# for char in sentence:
+#     if char in char_frequency:
+#         char_frequency[char] += 1
+#     else:
+#         char_frequency[char] = 1
+50
+# # print(char_frequency)
 
-# print(char_frequency)
+# newSort = char_frequency.items()
 
-newSort = char_frequency.items()
-
-char_freq = sorted(char_frequency.items(), 
-                    key=lambda kv: kv[1],
-                    reverse=True)
-print(char_freq[0])
-# print('Most repeated character:',newTups[-1][1], f'\nRepeated {newTups[-1][0]} times')
+# char_freq = sorted(char_frequency.items(),
+#                     key=lambda kv: kv[1],
+#                     reverse=True)
+# print(char_freq[0])
+# # print('Most repeated character:',newTups[-1][1], f'\nRepeated {newTups[-1][0]} times')
 
 # pprint(char_frequency, width=1)
+
+
+# EXCEPTIONS
+
+#  - Handle exceptions:
+# Basic structure
+# try:
+#     age = int(input("age: "))
+# except ValueError as ex:
+#     print("You didn't enter a valid age")
+#     # ex is type of error
+#     print(ex)
+#     print(type(ex))
+# else:
+#     print("No exceptions werer thrown")
+
+
+# Handling different exceptions
+# try:
+#     age = int(input("age: "))
+#     xfactor = 10 / age
+# except (ValueError, ZeroDivisionError):
+#     print("You didn't enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+
+# cleaning up
+
+# try:
+#     file = open("app.py")
+#     age = int(input("age: "))
+#     xfactor = 10 / age
+# except (ValueError, ZeroDivisionError):
+#     print("You didn't enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+# finally:
+#     file.close()
+
+# The With Statement
+# try:
+#     with open("app.py") as file:
+#         print("file opened")
+#     age = int(input("age: "))
+#     xfactor = 10 / age
+# except (ValueError, ZeroDivisionError):
+#     print("You didn't enter a valid age")
+# else:
+#     print("No exceptions were thrown")
+
+# Raising exceptions - not the most efficient way
+# def calculate_xfactor(age):
+#     if age <= 0:
+#         raise ValueError("Age cannot be zero or less")
+#     return 10/age
+
+# try:
+#     calculate_xfactor(-1)
+# except ValueError as error:
+#     print(error)
+
+# cost of raising exceptions
+# from timeit import timeit
+
+# code1 = """
+# def calculate_xfactor(age):
+#     if age <= 0:
+#         raise ValueError("Age cannot be zero or less")
+#     return 10/age
+#     try:
+#         calculate_xfactor(-1)
+#     except ValueError as error:
+#         pass
+# """
+
+# code2 = """
+# def calculate_xfactor(age):
+#     if age <= 0:
+#         return None
+#     return 10 / age
+
+# xfactor = calculate_xfactor(-1)
+# if xfactor == None:
+#     pass
+# """
+
+# print("first code:", timeit(code1, number=10000))
+# print("second code:", timeit(code2, number=10000))
+# These prints so the program's runtime
+
+# raising exceptions should be done with caution as they can increase run time
+#  Think twice when using them
