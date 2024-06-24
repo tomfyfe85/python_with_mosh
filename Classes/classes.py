@@ -2,13 +2,19 @@
 
 
 class Point:
-    def __init__(self, x , y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-    
+
+    @classmethod
+    def zero(cls):
+        """Returns point Class instance"""
+        return cls(0, 0)
+
     def draw(self):
-        print(f'point({self.x}, {self.y})')
+        """returns a string"""
+        print(f"point({self.x}, {self.y})")
 
 
-point = Point(1, 2)
+point = Point.zero()
 point.draw()

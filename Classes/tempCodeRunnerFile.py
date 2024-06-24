@@ -1,1 +1,1 @@
-point.draw()
+point = Point.zero()
