@@ -11,10 +11,16 @@ class Point:
         """Returns point Class instance"""
         return cls(0, 0)
 
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
     def draw(self):
         """returns a string"""
         print(f"point({self.x}, {self.y})")
 
 
 point = Point.zero()
-point.draw()
+# point.draw()
+print(point)
+
+
