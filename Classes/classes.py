@@ -34,5 +34,5 @@ class Point:
 point = Point(20, 10)
 other = Point(1, 2)
 
-com = point + other
-print(com.x)
+
+print(point.x)
