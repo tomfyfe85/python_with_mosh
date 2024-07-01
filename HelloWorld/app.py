@@ -5,7 +5,7 @@
 
 # items = [
 #     ("Product 1", 10),
-#     ("Product 2", 800),
+#     ("Product 2", 800), 
 #     ("Product 3", 8),
 # ]
 
