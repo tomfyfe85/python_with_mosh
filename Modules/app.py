@@ -1,6 +1,6 @@
-from sales import calc_shipping, calc_tax
+from ecommerce.shopping import sales
 
 
 
-calc_shipping()
-calc_tax()
+
+# print(dir(sales))
