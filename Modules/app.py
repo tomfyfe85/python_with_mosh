@@ -61,18 +61,42 @@ print(path.suffix)
 #         print(row)
  
 # JSON
-import json 
+# import json 
+# from pathlib import Path
+
+# # movies = [
+# #     {"id": 1, "title":"Terminator", "year": 1984 },
+# #     {"id": 2, "title":"Kindergarten Cop", "year": 1993 }
+# # ]
+
+# # data = json.dumps(movies)
+# # Path("movies.json").write_text(data)
+
+# # to read json
+# data = Path("movies.json").read_text()
+# movies = json.loads(data)
+# print(movies[1]["title"])
+
+# SQLlite
+
+import sqlite3
+import json
 from pathlib import Path
 
-# movies = [
-#     {"id": 1, "title":"Terminator", "year": 1984 },
-#     {"id": 2, "title":"Kindergarten Cop", "year": 1993 }
-# ]
+# movies = json.loads(Path("movies.json").read_text())
+# print(movies)
 
-# data = json.dumps(movies)
-# Path("movies.json").write_text(data)
+# with sqlite3.connect("db.sqlite3") as  conn:
+#     command = "INSERT INTO Movies VALUES(?,?,?)"
+#     for movie in movies:
+#         conn.execute(command, tuple(movie.values()))
+#     conn.commit()    
 
-# to read json
-data = Path("movies.json").read_text()
-movies = json.loads(data)
-print(movies[1]["title"])
+
+with sqlite3.connect("db.sqlite3") as  conn:
+    command = "SELECT * FROM Movies"
+    cursor = conn.execute(command)
+    # for row in cursor:
+    #     print(row)
+    movies = cursor.fetchall()
+    print(movies)
