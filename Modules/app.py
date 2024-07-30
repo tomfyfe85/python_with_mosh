@@ -54,14 +54,14 @@ print(path.suffix)
 # #     writer.writerow(["transaction_id", "product_id", "price"])
 # #     writer.writerow([100, 1, 5])
 # #     writer.writerow([100, 2, 15])
-    
+
 # with open("data.csv") as file:
 #     reader = csv.reader(file)
 #     for row in reader:
 #         print(row)
- 
+
 # JSON
-# import json 
+# import json
 # from pathlib import Path
 
 # # movies = [
@@ -79,24 +79,49 @@ print(path.suffix)
 
 # SQLlite
 
-import sqlite3
-import json
-from pathlib import Path
+# import sqlite3
+# import json
+# from pathlib import Path
 
-# movies = json.loads(Path("movies.json").read_text())
-# print(movies)
+# # movies = json.loads(Path("movies.json").read_text())
+# # print(movies)
+
+# # with sqlite3.connect("db.sqlite3") as  conn:
+# #     command = "INSERT INTO Movies VALUES(?,?,?)"
+# #     for movie in movies:
+# #         conn.execute(command, tuple(movie.values()))
+# #     conn.commit()
+
 
 # with sqlite3.connect("db.sqlite3") as  conn:
-#     command = "INSERT INTO Movies VALUES(?,?,?)"
-#     for movie in movies:
-#         conn.execute(command, tuple(movie.values()))
-#     conn.commit()    
+#     command = "SELECT * FROM Movies"
+#     cursor = conn.execute(command)
+#     # for row in cursor:
+#     #     print(row)
+#     movies = cursor.fetchall()
+#     print(movies)
 
 
-with sqlite3.connect("db.sqlite3") as  conn:
-    command = "SELECT * FROM Movies"
-    cursor = conn.execute(command)
-    # for row in cursor:
-    #     print(row)
-    movies = cursor.fetchall()
-    print(movies)
+# time and datetime
+# import time
+
+# print(time.time())
+
+# import random
+# import string
+
+# print(random.random())
+# print(random.randint(1, 100))
+# print(random.choice([1, 2, 3, 4]))
+# print(random.choices([1, 2, 3, 4], k=2))
+# # random password
+# # creates array of n of k, from string argument
+# print(random.choices("abcdefghi", k=4))
+# # .join to make into a random string
+# print("".join(random.choices("abcdefghi", k=4)))
+# #  string library
+# print("".join(random.choices(string.ascii_letters + string.digits, k=21)))
+
+# nums = [1, 2, 3, 4]
+# random.shuffle(nums)
+# print(nums)
