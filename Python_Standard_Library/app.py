@@ -1,4 +1,4 @@
-from pathlib import Path
+# from pathlib import Path
 # pathlib - python docs
 # path = Path("ecommerce/__init__.py")
 # path.exists()
@@ -22,5 +22,12 @@ from pathlib import Path
 # for p in path.iterdir():
 #     print(p)
     
-path = Path("ecommerce/__init__.py")
-print(path.stat())
+# path = Path("ecommerce/__init__.py")
+# print(path.stat())
+
+
+# WEB BROWSER
+import webbrowser
+
+print("Deployment completed")
+webbrowser.open("http://google.com")
