@@ -27,7 +27,32 @@
 
 
 # WEB BROWSER
-import webbrowser
+# import webbrowser
 
-print("Deployment completed")
-webbrowser.open("http://google.com")
+# print("Deployment completed")
+# webbrowser.open("http://google.com")
+
+# SENDING EMAILS
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+
+# import smtplib
+
+# message = MIMEMultipart()
+# message["from"] = "Tom Fyfe"
+# message["to"] = "tomfyfe85@gmail.com"
+# message["subject"] = "TEST"
+# message.attach(MIMEText("Body"))
+
+# with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
+#     smtp.ehlo()
+#     smtp.starttls()
+#     smtp.login("tomfyfe85@gmail.com", "Batdad696")
+#     print("sent..")
+
+#     smtp.send_message(message)
+
+
+#  COMMAND LINE ARGUMENTS
+# import sys
+# print(sys.argv)
