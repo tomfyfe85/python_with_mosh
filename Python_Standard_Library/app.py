@@ -7,11 +7,11 @@
 # print(path.name)
 # print(path.stem)
 # print(path.suffix)
-# print(path.parent) 
+# print(path.parent)
 # path.with_name("file.txt")
 # print(path.absolute())
 # path.with_suffix(".txt")
-# print(path)  
+# print(path)
 
 # path = Path("ecommerce")
 # path.exists()
@@ -21,7 +21,7 @@
 # print(path.iterdir())
 # for p in path.iterdir():
 #     print(p)
-    
+
 # path = Path("ecommerce/__init__.py")
 # print(path.stat())
 
@@ -56,3 +56,14 @@
 #  COMMAND LINE ARGUMENTS
 # import sys
 # print(sys.argv)
+
+# RUNNING EXTERNAL PROGRAMS
+import subprocess
+
+# completed = subprocess.run(["python3", "other.py"], capture_output=True, text=True)
+# print(completed.stdout)
+try:
+    completed = subprocess.run(["false"], capture_output=True, text=True, check=True)
+# print(completed.stdout)
+except subprocess.CalledProcessError as ex:
+    print(ex)
