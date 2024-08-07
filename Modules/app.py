@@ -1,16 +1,16 @@
 # from ecommerce.shopping import sales
 # print(dir(sales))
 
-from pathlib import Path
+# from pathlib import Path
 
-# pathlib - python docs
-path = Path("ecommerce/__init__.py")
-path.exists()
-path.is_file()
-path.is_dir()
-print(path.name)
-print(path.stem)
-print(path.suffix)
+# # pathlib - python docs
+# path = Path("ecommerce/__init__.py")
+# path.exists()
+# path.is_file()
+# path.is_dir()
+# print(path.name)
+# print(path.stem)
+# print(path.suffix)
 
 # path.exists()
 # path.mkdir()
@@ -125,3 +125,4 @@ print(path.suffix)
 # nums = [1, 2, 3, 4]
 # random.shuffle(nums)
 # print(nums)
+
