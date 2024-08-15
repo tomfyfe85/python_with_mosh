@@ -1,5 +1,5 @@
 # from ecommerce.shopping import sales
-# print(dir(sales))
+# print(dir(sales));
 
 # from pathlib import Path
 
@@ -126,6 +126,8 @@
 # random.shuffle(nums)
 # print(nums)
 
+# PIP
 import requests
 response = requests.get("http://google.com")
 print(response)
+
